@@ -16,7 +16,7 @@ def init_api():
     blueprint = Blueprint("api", __name__)
     api = Api(blueprint)
 
-    api.add_resource(SUMM, "/api/v1/summarization", methods=["POST"])
+    api.add_resource(SUMM, "/api/v1/summarization/", methods=["POST"])
 
     blueprint.after_request(add_cors_headers)
     app.register_blueprint(blueprint)

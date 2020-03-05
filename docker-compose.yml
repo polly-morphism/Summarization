@@ -1,0 +1,17 @@
+services: 
+  summarizer:
+    build: ./services
+    image: summarizer
+    container_name: summarizer
+    volumes:
+      - ${SUMMARIZER_PROJECT_ROOT}:./
+    environment:
+      - FLASK_APP=application.py
+      - FLASK_PORT=5000
+      - ENV=prod
+      - SUMMARIZER_API_URL="summarizer"
+    restart: unless-stopped
+volumes:
+  nvidia_driver:
+    external: true
+
