@@ -9,10 +9,10 @@ class Config(object):
 
     APP_NAME = "summarizer"
 
-    MONGO_DATABASE = "news_inn"
-    MONGO_PORT = 27017
-    MONGO_ALIAS = "default"
-    MONGODB_SETTINGS = {"db": MONGO_DATABASE, "alias": MONGO_ALIAS, "connect": False}
+    #MONGO_DATABASE = "news_inn"
+    #MONGO_PORT = 27017
+    #MONGO_ALIAS = "default"
+    #MONGODB_SETTINGS = {"db": MONGO_DATABASE, "alias": MONGO_ALIAS, "connect": False}
 
     SUMMARIZER_API_URL = os.getenv("SUMMARIZER_API_URL")
 
@@ -20,19 +20,19 @@ class Config(object):
 class ProductionConfig(Config):
     LOG_LEVEL = logging.ERROR
 
-    MONGO_HOST = os.getenv("MONGO_HOST")
-    MONGO_DATABASE = os.getenv("MONGO_DATABASE")
-    MONGO_PORT = int(os.getenv("MONGO_PORT", 0))
-    MONGO_USERNAME = os.getenv("MONGO_USERNAME")
-    MONGO_PASSWORD = os.getenv("MONGO_PASSWORD")
-    MONGODB_SETTINGS = {
-        "host": MONGO_HOST,
-        "port": MONGO_PORT,
-        "db": MONGO_DATABASE,
-        "username": MONGO_USERNAME,
-        "password": MONGO_PASSWORD,
-        "connect": False,
-    }
+    #MONGO_HOST = os.getenv("MONGO_HOST")
+    #MONGO_DATABASE = os.getenv("MONGO_DATABASE")
+    #MONGO_PORT = int(os.getenv("MONGO_PORT", 0))
+    #MONGO_USERNAME = os.getenv("MONGO_USERNAME")
+    #MONGO_PASSWORD = os.getenv("MONGO_PASSWORD")
+    #MONGODB_SETTINGS = {
+    #    "host": MONGO_HOST,
+    #    "port": MONGO_PORT,
+    #    "db": MONGO_DATABASE,
+    #    "username": MONGO_USERNAME,
+    #    "password": MONGO_PASSWORD,
+    #    "connect": False,
+    #}
 
 
 class DevelopmentConfig(Config):

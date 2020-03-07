@@ -2,7 +2,7 @@ version: '3'
 
 services:
   summarizer:
-    build: ./services
+    build: ./services/summarization
     image: summarizer
     container_name: summarizer
     volumes:
@@ -19,6 +19,7 @@ services:
       - GUNICORN_WORKERS_COUNT=${GUNICORN_WORKERS_COUNT}
       - GUNIKORN_TIMEOUT=${GUNIKORN_TIMEOUT}
       - SUMMARIZATION_API_URL=${SUMMARIZATION_API_URL}
+      - NVIDIA_VISIBLE_DEVICES=all 
       - ENV=prod
     command: sh /run.sh
     networks:
@@ -31,3 +32,4 @@ networks:
 volumes:
   nvidia_driver:
     external: true
+

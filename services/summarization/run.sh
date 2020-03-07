@@ -64,3 +64,4 @@ supervisord -c ${SUPERVISOR_CONF}
 
 # check supervisor status
 supervisorctl status gunicorn >> "${SUPERVISOR_LOG_FILE}"
+

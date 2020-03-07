@@ -26,8 +26,8 @@ import requests
 from bson import ObjectId
 from requests import Response
 
-from src.database import mongo_db
-from src.tasks import celery
+#from src.database import mongo_db
+#from src.tasks import celery
 from typing import Dict, Any, List, Union
 
 
@@ -147,22 +147,23 @@ class Summarization:
         return result
 
 
-@celery.task(ignore_result=True, name="get_summary")
-def get_summary(document_id: str) -> None:
-    selected_fields: Dict[str, int] = {
-        "title": 1,
-    }
-    document: Dict[str, Any] = mongo_db.news.find_one(
-        {"_id": ObjectId(document_id)}, selected_fields
-    )
+#@celery.task(ignore_result=True, name="get_summary")
+#def get_summary(document_id: str) -> None:
+#    selected_fields: Dict[str, int] = {
+#        "title": 1,
+#    }
+#    document: Dict[str, Any] = mongo_db.news.find_one(
+#        {"_id": ObjectId(document_id)}, selected_fields
+#    )
 
-    if document:
-        url = os.getenv("SUMMARIZER_API_URL")
-        headers = {"Content-type": "application/json"}
-        json_data: Dict[str, str] = {"text": document["content"]}
-        response: Response = requests.post(url=url, json=json_data, headers=headers)
+#    if document:
+#        url = os.getenv("SUMMARIZER_API_URL")
+#        headers = {"Content-type": "application/json"}
+#        json_data: Dict[str, str] = {"text": document["content"]}
+#        response: Response = requests.post(url=url, json=json_data, headers=headers)
 
-        if response.status_code == requests.codes.OK:
-            entities: List[Dict[str, Union[str, int, float]]] = list(response.json())
-            data = {"summary": entities}
-            mongo_db.news.update({"_id": ObjectId(document_id)}, {"$set": data})
+#        if response.status_code == requests.codes.OK:
+#            entities: List[Dict[str, Union[str, int, float]]] = list(response.json())
+#            data = {"summary": entities}
+#            mongo_db.news.update({"_id": ObjectId(document_id)}, {"$set": data})
+#
