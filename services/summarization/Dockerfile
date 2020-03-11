@@ -9,10 +9,10 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 # Install python 3.7
 
-RUN apt-get -y update && apt-get -y upgrade && apt-get -y install python3-pip python3-dev python3-setuptools gcc netcat tk supervisor  git
-RUN apt install software-properties-common
+RUN apt-get -y update && apt-get -y upgrade && apt-get -y install curl python3-pip python3-dev python3-setuptools gcc netcat tk supervisor  git
+RUN apt install -y software-properties-common
 RUN add-apt-repository ppa:deadsnakes/ppa
-RUN apt install python3.7
+RUN apt install -y python3.7
 RUN curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 RUN python3.7 get-pip.py
 

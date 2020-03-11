@@ -62886,3 +62886,144 @@ gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
 [2020-03-06 12:38:35 -0800] [118] [INFO] Booting worker with pid: 118
 [2020-03-06 12:39:02 -0800] [139] [INFO] Booting worker with pid: 139
 [2020-03-06 12:39:13 -0800] [144] [INFO] Booting worker with pid: 144
+[2020-03-06 14:56:50 -0800] [19] [INFO] Starting gunicorn 20.0.4
+[2020-03-06 14:56:50 -0800] [19] [INFO] Listening at: http://0.0.0.0:5000 (19)
+[2020-03-06 14:56:50 -0800] [19] [INFO] Using worker: sync
+[2020-03-06 14:56:50 -0800] [22] [INFO] Booting worker with pid: 22
+[2020-03-06 14:56:50 -0800] [23] [INFO] Booting worker with pid: 23
+[2020-03-06 14:56:50 -0800] [24] [INFO] Booting worker with pid: 24
+[2020-03-06 14:56:50 -0800] [25] [INFO] Booting worker with pid: 25
+[2020-03-06 14:56:50 -0800] [29] [INFO] Booting worker with pid: 29
+[2020-03-06 14:56:50 -0800] [30] [INFO] Booting worker with pid: 30
+[2020-03-06 14:56:51 -0800] [37] [INFO] Booting worker with pid: 37
+[2020-03-06 14:56:51 -0800] [38] [INFO] Booting worker with pid: 38
+[2020-03-06 14:58:46 -0800] [19] [INFO] Starting gunicorn 20.0.4
+[2020-03-06 14:58:46 -0800] [19] [INFO] Listening at: http://0.0.0.0:5000 (19)
+[2020-03-06 14:58:46 -0800] [19] [INFO] Using worker: sync
+[2020-03-06 14:58:46 -0800] [22] [INFO] Booting worker with pid: 22
+[2020-03-06 14:58:46 -0800] [23] [INFO] Booting worker with pid: 23
+[2020-03-06 14:58:46 -0800] [24] [INFO] Booting worker with pid: 24
+[2020-03-06 14:58:47 -0800] [25] [INFO] Booting worker with pid: 25
+[2020-03-06 14:58:47 -0800] [29] [INFO] Booting worker with pid: 29
+[2020-03-06 14:58:47 -0800] [30] [INFO] Booting worker with pid: 30
+[2020-03-06 14:58:47 -0800] [31] [INFO] Booting worker with pid: 31
+[2020-03-06 14:58:47 -0800] [35] [INFO] Booting worker with pid: 35
+[2020-03-06 15:05:19 -0800] [19] [INFO] Starting gunicorn 20.0.4
+[2020-03-06 15:05:19 -0800] [19] [INFO] Listening at: http://0.0.0.0:5000 (19)
+[2020-03-06 15:05:19 -0800] [19] [INFO] Using worker: sync
+[2020-03-06 15:05:19 -0800] [22] [INFO] Booting worker with pid: 22
+[2020-03-06 15:05:19 -0800] [23] [INFO] Booting worker with pid: 23
+[2020-03-06 15:05:19 -0800] [24] [INFO] Booting worker with pid: 24
+[2020-03-06 15:05:19 -0800] [25] [INFO] Booting worker with pid: 25
+[2020-03-06 15:05:19 -0800] [26] [INFO] Booting worker with pid: 26
+[2020-03-06 15:05:20 -0800] [27] [INFO] Booting worker with pid: 27
+[2020-03-06 15:05:20 -0800] [28] [INFO] Booting worker with pid: 28
+[2020-03-06 15:05:20 -0800] [35] [INFO] Booting worker with pid: 35
+[2020-03-06 15:07:53 -0800] [19] [INFO] Starting gunicorn 20.0.4
+[2020-03-06 15:07:53 -0800] [19] [INFO] Listening at: http://0.0.0.0:5000 (19)
+[2020-03-06 15:07:53 -0800] [19] [INFO] Using worker: sync
+[2020-03-06 15:07:53 -0800] [22] [INFO] Booting worker with pid: 22
+[2020-03-06 15:07:53 -0800] [23] [INFO] Booting worker with pid: 23
+[2020-03-06 15:07:53 -0800] [24] [INFO] Booting worker with pid: 24
+[2020-03-06 15:07:53 -0800] [25] [INFO] Booting worker with pid: 25
+[2020-03-06 15:07:53 -0800] [26] [INFO] Booting worker with pid: 26
+[2020-03-06 15:07:53 -0800] [27] [INFO] Booting worker with pid: 27
+[2020-03-06 15:07:53 -0800] [28] [INFO] Booting worker with pid: 28
+[2020-03-06 15:07:53 -0800] [29] [INFO] Booting worker with pid: 29
+  0%|          | 0/1 [00:00<?, ?it/s][2020-03-06 15:09:51,837] ERROR in app: Exception on /api/v1/summarization/ [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.7/dist-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python3.7/dist-packages/flask_restful/__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/usr/local/lib/python3.7/dist-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/usr/local/lib/python3.7/dist-packages/flask_restful/__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/usr/local/lib/python3.7/dist-packages/webargs/core.py", line 459, in wrapper
+    return func(*new_args, **kwargs)
+  File "/app/src/api/resources/summ.py", line 40, in post
+    result = summarizer.evaluate(arguments)
+  File "/app/src/pipeline/summarizer.py", line 142, in evaluate
+    for batch in tqdm(data_iterator):
+  File "/usr/local/lib/python3.7/dist-packages/tqdm/std.py", line 1104, in __iter__
+    for obj in iterable:
+  File "/usr/local/lib/python3.7/dist-packages/torch/utils/data/dataloader.py", line 345, in __next__
+    data = self._next_data()
+  File "/usr/local/lib/python3.7/dist-packages/torch/utils/data/dataloader.py", line 385, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "/usr/local/lib/python3.7/dist-packages/torch/utils/data/_utils/fetch.py", line 47, in fetch
+    return self.collate_fn(data)
+  File "/app/src/pipeline/summarizer.py", line 63, in collate_fn
+    return collate(data, tokenizer, block_size=512, device=args.device)
+  File "/app/src/pipeline/summarizer.py", line 106, in collate
+    src=encoded_stories.to(device),
+  File "/usr/local/lib/python3.7/dist-packages/torch/cuda/__init__.py", line 196, in _lazy_init
+    _check_driver()
+  File "/usr/local/lib/python3.7/dist-packages/torch/cuda/__init__.py", line 101, in _check_driver
+    http://www.nvidia.com/Download/index.aspx""")
+AssertionError: 
+Found no NVIDIA driver on your system. Please check that you
+have an NVIDIA GPU and installed a driver from
+http://www.nvidia.com/Download/index.aspx
+  0%|          | 0/1 [00:00<?, ?it/s][2020-03-06 15:42:50 -0800] [20] [INFO] Starting gunicorn 20.0.4
+[2020-03-06 15:42:50 -0800] [20] [INFO] Listening at: http://0.0.0.0:5000 (20)
+[2020-03-06 15:42:50 -0800] [20] [INFO] Using worker: sync
+[2020-03-06 15:42:51 -0800] [23] [INFO] Booting worker with pid: 23
+[2020-03-06 15:42:51 -0800] [24] [INFO] Booting worker with pid: 24
+[2020-03-06 15:42:51 -0800] [25] [INFO] Booting worker with pid: 25
+[2020-03-06 15:42:51 -0800] [26] [INFO] Booting worker with pid: 26
+[2020-03-06 15:42:51 -0800] [27] [INFO] Booting worker with pid: 27
+[2020-03-06 15:42:51 -0800] [28] [INFO] Booting worker with pid: 28
+[2020-03-06 15:42:51 -0800] [29] [INFO] Booting worker with pid: 29
+[2020-03-06 15:42:51 -0800] [30] [INFO] Booting worker with pid: 30
+  0%|          | 0/1 [00:00<?, ?it/s][2020-03-06 15:44:31,042] ERROR in app: Exception on /api/v1/summarization/ [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.7/dist-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python3.7/dist-packages/flask_restful/__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/usr/local/lib/python3.7/dist-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/usr/local/lib/python3.7/dist-packages/flask_restful/__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/usr/local/lib/python3.7/dist-packages/webargs/core.py", line 459, in wrapper
+    return func(*new_args, **kwargs)
+  File "/app/src/api/resources/summ.py", line 40, in post
+    result = summarizer.evaluate(arguments)
+  File "/app/src/pipeline/summarizer.py", line 142, in evaluate
+    for batch in tqdm(data_iterator):
+  File "/usr/local/lib/python3.7/dist-packages/tqdm/std.py", line 1104, in __iter__
+    for obj in iterable:
+  File "/usr/local/lib/python3.7/dist-packages/torch/utils/data/dataloader.py", line 345, in __next__
+    data = self._next_data()
+  File "/usr/local/lib/python3.7/dist-packages/torch/utils/data/dataloader.py", line 385, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "/usr/local/lib/python3.7/dist-packages/torch/utils/data/_utils/fetch.py", line 47, in fetch
+    return self.collate_fn(data)
+  File "/app/src/pipeline/summarizer.py", line 63, in collate_fn
+    return collate(data, tokenizer, block_size=512, device=args.device)
+  File "/app/src/pipeline/summarizer.py", line 106, in collate
+    src=encoded_stories.to(device),
+  File "/usr/local/lib/python3.7/dist-packages/torch/cuda/__init__.py", line 196, in _lazy_init
+    _check_driver()
+  File "/usr/local/lib/python3.7/dist-packages/torch/cuda/__init__.py", line 101, in _check_driver
+    http://www.nvidia.com/Download/index.aspx""")
+AssertionError: 
+Found no NVIDIA driver on your system. Please check that you
+have an NVIDIA GPU and installed a driver from
+http://www.nvidia.com/Download/index.aspx
+  0%|          | 0/1 [00:00<?, ?it/s][2020-03-11 07:51:23 -0700] [19] [INFO] Starting gunicorn 20.0.4
+[2020-03-11 07:51:23 -0700] [19] [INFO] Listening at: http://0.0.0.0:5000 (19)
+[2020-03-11 07:51:23 -0700] [19] [INFO] Using worker: sync
+[2020-03-11 07:51:23 -0700] [22] [INFO] Booting worker with pid: 22
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:05<00:00,  5.47s/it]100%|██████████| 1/1 [00:05<00:00,  5.47s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:01<00:00,  1.03s/it]100%|██████████| 1/1 [00:01<00:00,  1.03s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:01<00:00,  1.03s/it]100%|██████████| 1/1 [00:01<00:00,  1.03s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:01<00:00,  1.04s/it]100%|██████████| 1/1 [00:01<00:00,  1.04s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:01<00:00,  1.03s/it]100%|██████████| 1/1 [00:01<00:00,  1.03s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:01<00:00,  1.03s/it]100%|██████████| 1/1 [00:01<00:00,  1.03s/it]

@@ -8,6 +8,8 @@ install:
 	@sudo apt update
 	@sudo apt install -y docker-ce docker-compose
 	@sudo apt install -y nvidia-docker2
+	@sudo apt update
+	@sudo apt autoremove -y
 	@sudo pkill -SIGHUP dockerd
 	@docker volume create --name=nvidia_driver
 build:

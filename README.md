@@ -1,3 +1,29 @@
+HOW TO SET UP ON A NEW SERVER:
+
+sudo su 
+cd /etc/docker 
+in daemon.json:
+
+{
+    "default-runtime": "nvidia",
+    "runtimes": {
+        "nvidia": {
+            "path": "nvidia-container-runtime",
+            "runtimeArgs": []
+        }
+    }
+}
+
+sudo pkill -SIGHUP dockerd
+
+log out and log back in
+
+make install
+make build
+docker-compose up -d
+
+HOW TO USE:
+
 Request:
 
 curl -i -H "Content-Type: application/json"  -d 
